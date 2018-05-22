@@ -1,0 +1,17 @@
+<header>
+  <video autoplay="" loop="" poster="http://minermeltdown.net/wp-content/uploads/2016/03/action-3-5-high.jpg">
+    <source src="http://minermeltdown.net/wp-content/uploads/2017/05/Website-Header.mp4" type="video/mp4">
+  </video>
+  <div class="header-content">
+    <div class="header-content-inner">
+      {{ with .Site.Params.hero.slogan }}
+      <h1>{{ . | markdownify }}</h1>
+      {{ end }} {{ if and .Site.Params.hero.slogan .Site.Params.hero.subtitle }}
+      <hr> {{ end }} {{ with .Site.Params.hero.subtitle }}
+      <p>{{ . | markdownify }}</p>
+      {{ end }} {{ with .Site.Params.hero.buttonText }}
+      <a href="#about" class="btn btn-primary btn-xl page-scroll">{{ . }}</a>
+      {{ end }}
+    </div>
+  </div>
+</header>
